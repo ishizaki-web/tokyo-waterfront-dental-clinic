@@ -211,6 +211,10 @@ footer {
     text-align: center;
 }
 
+p.copyright {
+    font-size: 14px;
+}
+
 /*
 DESKTOP SIZE
 ================================================ */
@@ -359,14 +363,7 @@ DESKTOP SIZE
     }
 
 /* Footer */
-    .footer-nav {
-        display: flex;
-        justify-content: center;
-    }
-    .footer-nav li {
-        margin: 0 .75rem;
-    }
-    .footer-nav a:hover {
-        color: #fff;
+    p.copyright {
+        font-size: 10px;
     }
 }
