@@ -212,7 +212,7 @@ footer {
 }
 
 p.copyright {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /*
@@ -361,7 +361,9 @@ DESKTOP SIZE
     .select-box {
         width: 40%;
     }
+}
 
+@media (max-width: 640px) {
 /* Footer */
     p.copyright {
         font-size: 10px;
