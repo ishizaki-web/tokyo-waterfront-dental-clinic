@@ -116,27 +116,22 @@
         });
       });
     
-// TOP BACKボタン
-    
-      $(function() {
-          var topBtn = $('#page-top');    
-          topBtn.hide();
-          //スクロールが100に達したらボタン表示
-          $(window).scroll(function () {
-              if ($(this).scrollTop() > 100) {
-                  topBtn.fadeIn();
-              } else {
-                  topBtn.fadeOut();
-              }
-          });
-          //スクロールしてトップ
-          topBtn.click(function () {
-              $('body,html').animate({
-                  scrollTop: 0
-              }, 500);
-              return false;
-          });
-      });
+// topback show hide
+$(function() {
+  var navi = $("#topback");
+  var startPos = 0;
+  $(window).scroll(function() {
+    var currentPos = $(this).scrollTop();
+    if (currentPos > startPos) {
+      if ($(window).scrollTop() >= 600) {
+        $(navi).css("transform", "translateY(300%)");
+      }
+    } else {
+      $(navi).css("transform", "translateY(0)");
+    }
+    startPos = currentPos;
+  });
+});
     
 
 // マーカー
