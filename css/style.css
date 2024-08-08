@@ -56,9 +56,9 @@ h1,h2,h3 {
   font-size: 5em;
   text-align: right;
   margin-right: 50px;
-  background: -webkit-linear-gradient( 60deg,#030303,#fff,#fff,#030303,#fff,#fff);
+  background: linear-gradient( 60deg,#030303,#fff,#fff,#030303,#fff,#fff);
   background-size:400%;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textAnime 15s infinite;
 /*   background-color: #fff; */
@@ -172,9 +172,9 @@ h1,h2,h3 {
   letter-spacing: 0.05em;
   font-size: 2em;
   color: #030303;
-  background: -webkit-linear-gradient(top, #808080 0%, #6b6b6b 50%, #030303 51%,#bbb 70%,
-  #6b6b6b 73%,#030303 80%);
-  -webkit-background-clip: text;
+  background: linear-gradient( 60deg,#030303,#c4c4c4,#030303,#c4c4c4);
+  background-clip: text;
+  --webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
 }
@@ -246,10 +246,10 @@ display: none;
   background-size: 150% 15px;
   background-position: 0 20px;
   background-repeat: repeat-x;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  -ms-transition: all 2s ease;
+  --webkit-transition: all 2s ease;
+  --moz-transition: all 2s ease;
+  --o-transition: all 2s ease;
+  --ms-transition: all 2s ease;
 }
 .ctw-marker-bold.ctw-marker-position {
   background-position: -150% 20px;
@@ -1026,28 +1026,23 @@ border-right: 1px solid #bbb;
 
 /* TOPに戻るボタン-------------------------------------------- */
 
-#page-top {
+/* topback */
+#topback {
+  display: block;
+  z-index: 100;
+  transition: 0.6s;
+  padding: 0.6em;
+  color: #1b75bc;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 1em;
-  width: 70px; 
-}
-#page-top a {
-  color: #fff;
-  border-radius: 10px;
-  background-color: #c4c4c4;
-  padding: 10px 0 ;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
-}
-#page-top a:hover {
-  text-decoration: none;
-  background-color: #1b75bc;
+  font-size: 4em;
 }
 
+#topback :hover {
+  text-decoration: none;
+  color: #c4c4c4;
+}
 
 /* --icomoon ロゴマーク-------------------------------------------- */
 
